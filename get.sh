@@ -6,4 +6,4 @@ tmpresult=$(curl  --user-agent "${UA_Browser}" -4 -s --max-time 10 "https://apis
 qq=$(echo $tmpresult | python -m json.tool 2> /dev/null | grep '"qq"' | cut -f4 -d'"')
 st=$(echo $tmpresult | python -m json.tool 2> /dev/null | grep '"st"' | cut -f4 -d'"')
 m3u_RUL=$(echo $tmpresult | python -m json.tool 2> /dev/null | grep boostStreamUrl | cut -f4 -d'"')
-result="${m3u_RUL}?st=${st}&qq=${qq}"
+echo "${m3u_RUL}?st=${st}&qq=${qq}" 
