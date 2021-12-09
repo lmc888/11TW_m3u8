@@ -8,13 +8,13 @@ st1=$(echo $tmpresult1 | python -m json.tool 2> /dev/null | grep '"st"' | cut -f
 m3u_url1=$(echo $tmpresult1 | python -m json.tool 2> /dev/null | grep boostStreamUrl | cut -f4 -d'"')
 ch01="${m3u_url1}?st=${st1}&qq=${qq1}"
 
-tmpresult2=$(curl  --user-agent "${UA_Browser}" -4 -s --max-time 10 "https://apis.v-saas.com:9501/member/api/viewAuthorization?contentId=2&memberId=384030&menuId=3&platform=5&imei=c959b475-f846-4a86-8e9b-508048372407")
+tmpresult2=$(curl  --user-agent "${UA_Browser}" -4 -s --max-time 10 "https://apis.v-saas.com:9501/member/api/viewAuthorization?contentId=2&memberId=394014&menuId=3&platform=5&imei=c959b475-f846-4a86-8e9b-508048372407")
 qq2=$(echo $tmpresult2 | python -m json.tool 2> /dev/null | grep '"qq"' | cut -f4 -d'"')
 st2=$(echo $tmpresult2 | python -m json.tool 2> /dev/null | grep '"st"' | cut -f4 -d'"')
 m3u_url2=$(echo $tmpresult2 | python -m json.tool 2> /dev/null | grep boostStreamUrl | cut -f4 -d'"')
 ch02="${m3u_url2}?st=${st2}&qq=${qq2}"
 
-tmpresult3=$(curl  --user-agent "${UA_Browser}" -4 -s --max-time 10 "https://apis.v-saas.com:9501/member/api/viewAuthorization?contentId=10&memberId=384030&menuId=3&platform=5&imei=c959b475-f846-4a86-8e9b-508048372407")
+tmpresult3=$(curl  --user-agent "${UA_Browser}" -4 -s --max-time 10 "https://apis.v-saas.com:9501/member/api/viewAuthorization?contentId=10&memberId=394014&menuId=3&platform=5&imei=c959b475-f846-4a86-8e9b-508048372407")
 qq3=$(echo $tmpresult3 | python -m json.tool 2> /dev/null | grep '"qq"' | cut -f4 -d'"')
 st3=$(echo $tmpresult3 | python -m json.tool 2> /dev/null | grep '"st"' | cut -f4 -d'"')
 m3u_url3=$(echo $tmpresult3 | python -m json.tool 2> /dev/null | grep boostStreamUrl | cut -f4 -d'"')
