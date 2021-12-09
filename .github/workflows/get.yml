@@ -1,0 +1,13 @@
+name: 'getM3U'
+on: 
+  push:
+  schedule:
+    - cron: '0 0 * * *'
+jobs:
+  run_bash:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout codes'
+        uses: actions/checkout@v2
+      - name: 'run the script'
+        run: bash get.sh
