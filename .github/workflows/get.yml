@@ -11,9 +11,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: 'run the script'
-        run: |
-          check_id.sh
-          bash get.sh
+        run: bash get.sh
         
       - name: 'Commit'
         run: |
